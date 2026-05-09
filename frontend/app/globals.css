@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-card: #111827;
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: black;
+}
+
+@layer components {
+  .glass-card {
+    @apply border border-white/10 backdrop-blur-md rounded-2xl p-6 shadow-2xl;
+
+    background-color: rgba(17, 24, 39, 0.6);
+
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
